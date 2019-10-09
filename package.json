@@ -4,8 +4,11 @@
   "description": "Personal website to host projects.",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "jest"
   },
   "author": "Ricardo Furtado",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
