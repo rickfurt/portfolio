@@ -1,0 +1,11 @@
+{
+  "name": "rick-website",
+  "version": "1.0.0",
+  "description": "Personal website to host projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Ricardo Furtado",
+  "license": "MIT"
+}
