@@ -4,11 +4,17 @@
   "description": "Personal website to host projects.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "prettier --check tests/**/*.js && eslint tests/**/*.js",
+    "lint:fix": "prettier --write tests/**/*.js"
   },
   "author": "Ricardo Furtado",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "eslint": "^6.5.1",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2"
   }
 }
