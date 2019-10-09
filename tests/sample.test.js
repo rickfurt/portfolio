@@ -1,8 +1,7 @@
-function sampleTest(name){
-    return name;
+function sampleTest(name) {
+  return name;
 }
 
-
-test('Sample test', () => {
-    expect(sampleTest('Rick')).toEqual('Rick');
+test("Sample test", () => {
+  expect(sampleTest("Rick")).toEqual("Rick");
 });
