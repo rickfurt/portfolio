@@ -13,3 +13,17 @@ Running tests:
 ```shel
 npm test
 ```
+## Linter
+
+How to run?
+
+```shell
+npm run lint
+```
+
+Need to fix ? Just run :
+
+```shell
+npm run lint:fix
+```
+
