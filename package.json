@@ -11,6 +11,7 @@
   "author": "Ricardo Furtado",
   "license": "MIT",
   "devDependencies": {
+    "dotenv": "^8.1.0",
     "eslint": "^6.5.1",
     "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-react": "^7.16.0",
@@ -19,6 +20,6 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.7.3"
+    "mongoose": "^5.7.4"
   }
 }
