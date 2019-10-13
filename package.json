@@ -4,6 +4,7 @@
   "description": "Personal website to host projects.",
   "main": "index.js",
   "scripts": {
+    "server": "node src/server.js",
     "test": "jest",
     "lint": "prettier --check tests/**/*.js && eslint tests/**/*.js",
     "lint:fix": "prettier --write tests/**/*.js"
