@@ -15,8 +15,6 @@ db.once("open", function() {
   console.log("database connected");
 });
 
-var Schema = mongoose.Schema;
-
 var projectSchema = new mongoose.Schema({
   title: String,
   description: String,
@@ -65,6 +63,27 @@ setTimeout(() => {
   findAll();
 }, 4000);
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/", (req, res) => {
+  let title = req.query.title;
+
+  findProject(title);
+  res.send("found");
+});
+
+app.post("/create", (req, res) => {
+  let title = req.query.title;
+  let description = req.query.description;
+  let url = req.query.url;
+
+  saveProjectToDb(title, description, url);
+  res.send("something");
+});
+
+app.post("/delete", (req, res) => {
+  let title = req.query.title;
+
+  deleteProject(title);
+  res.send("Deleted");
+});
 
 app.listen(port, () => console.log(`Server running on port ${port}!`));
