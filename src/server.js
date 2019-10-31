@@ -4,6 +4,8 @@ const port = process.env.PORT || 3000;
 require("dotenv").config();
 var mongoose = require("mongoose");
 
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
+
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
