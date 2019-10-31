@@ -7,8 +7,8 @@
     "server": "node src/server.js",
     "client": "parcel public/index.html",
     "test": "jest",
-    "lint": "prettier --check {src,tests}/**/*.js && eslint {src,tests}/**/*.js",
-    "lint:fix": "prettier --write {src,tests}/**/*.js"
+    "lint": "prettier --check {src,tests,components}/**/*.js && eslint {src,tests,components}/**/*.js",
+    "lint:fix": "prettier --write {src,tests,components}/**/*.js"
   },
   "author": "Ricardo Furtado",
   "license": "MIT",
