@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "node src/server.js",
+    "client": "parcel public/index.html",
     "test": "jest",
     "lint": "prettier --check {src,tests}/**/*.js && eslint {src,tests}/**/*.js",
     "lint:fix": "prettier --write {src,tests}/**/*.js"
@@ -23,6 +24,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.7.4",
     "parcel-bundler": "^1.12.4",
-    "react": "^16.11.0"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }
