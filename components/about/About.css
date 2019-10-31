@@ -1,0 +1,18 @@
+.profile-img{
+ margin-top:15px ;   
+}
+
+.about-text{
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 320px) {
+    .profile-img{
+        margin: 0;
+        width:90vw;
+    }        
+
+    .about-text{
+        font-size: 18px;
+    }
+}

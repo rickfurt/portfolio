@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Menubar from "./menubar/Menubar";
+import About from "./about/About";
+
 import "./index.css";
 
 class App extends Component {
@@ -7,7 +10,12 @@ class App extends Component {
     super(props);
   }
   render() {
-    return <h1>All the Components will be rendered here...</h1>;
+    return (
+      <>
+        <Menubar />
+        <About />
+      </>
+    );
   }
 }
 
