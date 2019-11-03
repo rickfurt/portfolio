@@ -2,10 +2,11 @@ import React from "react";
 import "./projects.css";
 
 function Projects(props) {
-  console.log(props);
+  const projects = props.projects;
+
   return (
     <ul>
-      {props.projects.map(data => (
+      {projects.map(data => (
         <li key={data._id}>
           <a href={data.url}>{data.title}</a>
         </li>

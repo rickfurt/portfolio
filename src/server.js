@@ -5,8 +5,6 @@ const cors = require("cors");
 require("dotenv").config();
 var mongoose = require("mongoose");
 
-/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
-
 app.use(cors());
 
 mongoose.connect(process.env.DATABASE_URL, {
@@ -66,6 +64,11 @@ app.get("/projects", (req, res) => {
       res.send(data);
     }
   });
+});
+
+app.get("/projects/:projectId", (req, res) => {
+  let projectId = req.params.projectId;
+  res.send(findProject(projectId));
 });
 
 app.post("/create", (req, res) => {
