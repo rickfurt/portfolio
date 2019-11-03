@@ -1,0 +1,24 @@
+.skill-icons{
+    width: 5rem;
+    height: 5rem;
+    padding: 10px;
+}
+
+.skill-icons:hover{
+    background-color: #000000;
+    border:1px solid #ffffff;
+    border-radius: 8px;
+    color:#fcfcfe;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+@media only screen and (max-width: 320px) {
+    .skill-icons{
+        width: 3rem;
+        height: 3rem;
+        padding: 3px;
+    }
+}

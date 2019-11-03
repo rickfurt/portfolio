@@ -17,10 +17,10 @@ export default class About extends Component {
         <Jumbotron fluid>
           <Container>
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={12} sm={12} md={12} lg={3} xlg={6}>
                 <Image src={profile} className="profile-img" rounded />
               </Col>
-              <Col xs={12} md={6}>
+              <Col xs={12} sm={12} md={12} lg={8} xlg={6}>
                 <h1>About me</h1>
                 <p className="about-text">
                   I started programming in 2016, since then I’ve been gaining
