@@ -7,9 +7,6 @@ import Image from "react-bootstrap/Image";
 import profile from "../../public/profile.jpg";
 import "./About.css";
 
-
-
-
 export default class About extends Component {
   render() {
     return (
