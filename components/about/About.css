@@ -6,6 +6,11 @@
     font-size: 25px;
 }
 
+.skill-icons{
+    width: 3rem;
+    height: 3rem;
+}
+
 @media only screen and (max-width: 320px) {
     .profile-img{
         margin: 0;
