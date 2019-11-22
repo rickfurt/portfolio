@@ -13,10 +13,11 @@ class Menubar extends Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             {/* <Nav.Link href="#about">About</Nav.Link> */}
-            <Nav.Link href="#experience">Experience</Nav.Link>
-            <Nav.Link href="#education">Education</Nav.Link>
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
+            <Nav.Link href="#experience-tab">Experience</Nav.Link>
+            <Nav.Link href="#education-tab">Education</Nav.Link>
+            <Nav.Link href="#skill-tab">Skills</Nav.Link>
+            <Nav.Link href="#projects-tab">Projects</Nav.Link>
+            <Nav.Link href="#contact-tab">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

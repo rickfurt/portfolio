@@ -20,6 +20,9 @@ export default class Skills extends Component {
   render() {
     return (
       <Container>
+        <a name="skill-tab">
+          <h2>Skills</h2>
+        </a>
         <Row>
           <Col xs={12} md={12}>
             <FaHtml5 className="skill-icons" />
