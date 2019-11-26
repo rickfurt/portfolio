@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 require("dotenv").config();
+var cors = require("cors");
 var mongoose = require("mongoose");
 
 mongoose.connect(process.env.DATABASE_URL, {
@@ -64,7 +65,7 @@ setTimeout(() => {
   findAll();
 }, 4000);
 
-app.get("/", (req, res) => {
+app.get("/", cors(), (req, res) => {
   let title = req.query.title;
 
   findProject(title);
