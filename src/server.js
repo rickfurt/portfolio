@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+const cors = require("cors");
 require("dotenv").config();
-var cors = require("cors");
 var mongoose = require("mongoose");
+
+app.use(cors());
 
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
@@ -34,12 +36,6 @@ const saveProjectToDb = (title, description, url) => {
   });
 };
 
-const findAll = () => {
-  Project.find((err, data) => {
-    err ? console.log(err) : console.log(data);
-  });
-};
-
 const findProject = title => {
   Project.find({ title })
     .then(response => {
@@ -61,15 +57,19 @@ const deleteProject = title => {
   console.log("Project " + title + " has been deleted");
 };
 
-setTimeout(() => {
-  findAll();
-}, 4000);
+app.get("/projects", cors(), (req, res) => {
+  Project.find((err, data) => {
+    if (err) {
+      res.send("Error loading the projects - error" + err);
+    } else {
+      res.send(data);
+    }
+  });
+});
 
-app.get("/", cors(), (req, res) => {
-  let title = req.query.title;
-
-  findProject(title);
-  res.send("found");
+app.get("/projects/:projectId", (req, res) => {
+  let projectId = req.params.projectId;
+  res.send(findProject(projectId));
 });
 
 app.post("/create", (req, res) => {
