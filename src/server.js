@@ -3,6 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const cors = require("cors");
 require("dotenv").config();
+var cors = require("cors");
 var mongoose = require("mongoose");
 
 app.use(cors());
@@ -12,6 +13,7 @@ mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true
 });
 
+// eslint-disable-next-line no-console
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function() {
@@ -56,7 +58,7 @@ const deleteProject = title => {
   console.log("Project " + title + " has been deleted");
 };
 
-app.get("/projects", (req, res) => {
+app.get("/projects",cors() (req, res) => {
   Project.find((err, data) => {
     if (err) {
       res.send("Error loading the projects - error" + err);
