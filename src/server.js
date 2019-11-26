@@ -3,7 +3,6 @@ const app = express();
 const port = process.env.PORT || 3000;
 const cors = require("cors");
 require("dotenv").config();
-var cors = require("cors");
 var mongoose = require("mongoose");
 
 app.use(cors());
@@ -58,7 +57,7 @@ const deleteProject = title => {
   console.log("Project " + title + " has been deleted");
 };
 
-app.get("/projects",cors() (req, res) => {
+app.get("/projects", cors(), (req, res) => {
   Project.find((err, data) => {
     if (err) {
       res.send("Error loading the projects - error" + err);
