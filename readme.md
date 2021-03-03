@@ -8,8 +8,8 @@ Stack
 + [Bootstrap](https://getbootstrap.com/)
 + [mongoDb](https://www.mongodb.com/)
 + [mongoose](https://mongoosejs.com/docs/)
-+ [Cloudinary API](https://cloudinary.com/documentation/admin_api)
 + [Handlebars](https://handlebarsjs.com/)
++ [Github Actions](https://github.com/features/actions)
 + Others
 
 ## Requirements
